@@ -6,3 +6,15 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const ulIngredients = document.getElementById("ingredients");
+const fragment = document.createDocumentFragment();
+for (const ingredient of ingredients) {
+   const li = document.createElement("li");
+   li.textContent = ingredient;
+   li.classList.add("item");
+   fragment.appendChild(li);
+}
+
+ulIngredients.appendChild(fragment);
+
